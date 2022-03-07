@@ -1,0 +1,143 @@
+%==============================================================================
+% Sjabloon onderzoeksvoorstel bachelorproef
+%==============================================================================%
+% Compileren in TeXstudio:
+%
+% - Zorg dat Biber de bibliografie compileert (en niet Biblatex)
+%   Options > Configure > Build > Default Bibliography Tool: "txs:///biber"
+% - F5 om te compileren en het resultaat te bekijken.
+% - Als de bibliografie niet zichtbaar is, probeer dan F5 - F8 - F5
+%   Met F8 compileer je de bibliografie apart.
+%
+% Als je JabRef gebruikt voor het bijhouden van de bibliografie, zorg dan
+% dat je in ``biblatex''-modus opslaat: File > Switch to BibLaTeX mode.
+
+\documentclass{hogent-article}
+
+\usepackage{lipsum} % Voor vultekst
+
+%------------------------------------------------------------------------------
+% Metadata over het artikel
+%------------------------------------------------------------------------------
+
+%---------- Titel & auteur ----------------------------------------------------
+
+% TODO: (fase 2) geef werktitel van je eigen voorstel op
+\PaperTitle{Huawei omvormer SUN2000 data lokaal uitlezen}
+% Dit is typisch de opdracht en het vak waarvoor dit artikel geschreven is, bv.
+% ``Verslag onderzoeksproject Onderzoekstechnieken 2018-2019''
+\PaperType{Paper Research Methods: onderzoeksvoorstel}
+
+% TODO: (fase 1) vul je eigen naam in als auteur, geef ook je emailadres mee!
+\Authors{Bart De Paepe\textsuperscript{1}} % Authors
+
+% Als het hier effectief gaat om een voorstel voor de bachelorproef, dan ben je
+% hier verplicht de naam van je co-promotor in te vullen. Zoniet, dan kan je het
+% leeg laten.
+\CoPromotor{}
+
+% Contactinfo: Geef hier de contactgegevens van elke auteur van het artikel (en
+% indien van toepassing ook van de co-promotor).
+\affiliation{
+    \textsuperscript{1} \href{mailto:bart.depaepe@student.hogent.be}{bart.depaepe@student.hogent.be}}
+
+%---------- Abstract ----------------------------------------------------------
+
+\Abstract{% TODO: (fase 6)
+    Hier schrijf je de samenvatting van je artikel, als een doorlopende tekst van één paragraaf.
+    
+    Bij de sleutelwoorden geef je het onderzoeksdomein (= specialisatierichting in de opleiding), samen met andere sleutelwoorden die je werk beschrijven.
+}
+
+%---------- Onderzoeksdomein en sleutelwoorden --------------------------------
+% TODO: (fase 2) Vul de sleutelwoorden aan.
+
+% Het eerste sleutelwoord beschrijft het onderzoeksdomein. Je kan kiezen uit
+% deze lijst:
+%
+% - Mobiele applicatieontwikkeling
+% - Webapplicatieontwikkeling
+% - Applicatieontwikkeling (andere)
+% - Systeembeheer
+% - Netwerkbeheer
+% - Mainframe
+% - E-business
+% - Databanken en big data
+% - Machineleertechnieken en kunstmatige intelligentie
+% - Andere (specifieer)
+%
+% De andere sleutelwoorden zijn vrij te kiezen.
+
+\Keywords{Onderzoeksdomein; Applicatieontwikkeling (andere); automatisering; zonnepanelen}
+\newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
+
+%---------- Titel, inhoud -----------------------------------------------------
+
+\begin{document}
+    
+    \flushbottom % Makes all text pages the same height
+    \maketitle % Print the title and abstract box
+    \tableofcontents % Print the contents section
+    \thispagestyle{empty} % Removes page numbering from the first page
+    
+    %------------------------------------------------------------------------------
+    % Hoofdtekst
+    %------------------------------------------------------------------------------
+    
+    \section{Inleiding}
+    
+    % TODO: (fase 2) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
+    Het ontwikkelen van een geautomatiseerd proces om de data van een Huawei omvormer SUN2000 uit te lezen, op te slaan en weer te geven. Vandaag beschikken meer en meer gezinnen over een zonnepaneleninstallatie op hun woning. We maken de veronderstelling dat die gezinnen ook geïnteresseerd zijn om de opbrengst van hun installatie te kennen. Elke installatie bestaat onder andere uit een omvormer. Dit toestel zet de opgewekte gelijkstroom van de zonnepanelen om in wisselstroom voor gebruik op het elektrische net. De omvormer beschikt ook over onderdelen die de hoeveelheid geproduceerde stroom meten. Typisch biedt de fabrikant van de omvormer een applicatie aan waarop de gebruiker de opbrengst van zijn installatie kan raadplegen. Wij maken de veronderstelling dat een groot aantal gebruikers deze gegevens maandelijks overneemt in een Excel bestand om op die manier de evolutie van de opbrengst bij te houden.
+    Dit kan beter. Het doel van dit onderzoek is om een geautomatiseerd systeem te ontwikkelen zodat de gebruiker zelf op elk moment over de meest recente cijfers van zijn installatie beschikt. Dit op zich lijkt op het eerste zicht niet zo'n verbetering, want de gebruiker beschikt ook over die gegevens via de applicatie van de fabrikant. Maar het wordt wel interessant wanneer we deze gegevens zouden kunnen combineren met die van de digitale meter. Dan kunnen er waarden berekend worden zoals zelfconsumptie (totale opbrengst - geïnjecteerde opbrengst) en zelfvoorzienendheid (zelfconsumptie / (zelfconsumptie + verbruik)).
+    Het onderzoeksvoorstel is dus zeer SPECIFIEK en toepasbaar. Het is ook MEETBAAR want de gegevens kunnen gecontroleerd met die van de fabrikant. Het is ook ACTUEEL aangezien meer en meer gezinnen beschikken over een installatie. Het is REALISTISCH want het plaatsen van de toestellen wordt de komende jaren meer en meer uitgerold. Tenslotte is het ook TIJDSGEBONDEN want de architectuur van de applicatie laat ons toe om een Minimal Viable Product (MVP) te definiëren bestaande uit:
+    \begin{itemize}
+        \item Connecteren met de omvormer over lokaal netwerk
+        \item Data uitlezen via API van de omvormer
+        \item Data opslaan
+    \end{itemize}
+    Andere deelvragen van het onderzoek zoals:
+    \begin{itemize}
+        \item Data visualiseren
+        \item App op smartphone voor perfecte usability
+        \item Uitlezen data van de digitale meter
+        \item Berekenen van betekenisvolle afgeleide waarden
+        \item Centrale opslag van de gegevens per gebruiker via een client-server architectuur
+    \end{itemize}
+    kunnen afzonderlijk ontwikkeld worden.
+    Het doel van dit onderzoek is om een werkend systeem te ontwikkelen dat een gebruiker toe laat om ten allen tijde de opbrengst van zijn installatie tot op heden te raadplegen. Als Proof Of Concept (POC) wordt er gewerkt met de Huawei omvormer SUN2000.
+    \lipsum[1-3]
+    
+    \section{Overzicht literatuur}
+    
+    % TODO: (fase 4) schrijf de literatuurstudie uit en gebruik waar gepast referenties naar de vakliteratuur.
+    
+    % Refereren naar de literatuur kan met:
+    % \autocite{BIBTEXKEY} -> (Auteur, jaartal)
+    % \textcite{BIBTEXKEY} -> Auteur (jaartal)
+    Voorbeeld van een referentie waar de auteursnaam geen onderdeel van de zin is~\autocite{Moore2002}.
+    
+    \lipsum[4-9]
+    
+    \section{Methodologie}
+    
+    % TODO: (fase 5) beschrijf in detail in welke fasen je onderzoek uiteenvalt, hoe lang elke fase duurt en wat het concrete resultaat van elke fase is. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
+    
+    \lipsum[10-12]
+    
+    \section{Verwachte conclusies}
+    
+    % TODO: (fase 6) beschrijf wat je verwacht uit je onderzoek en waarom (bv. volgens je literatuuronderzoek is softwarepakket A het meest gebruikte en denk je dat het voor deze casus ook het meest geschikt zal zijn). Natuurlijk kan je niet in de toekomst kijken en mag je geen alternatieve mogelijkheden uitsluiten. In de praktijk gebeurt het ook vaak dat een onderzoek tot verrassende resultaten leidt, dat maakt het proces nog interessanter!
+    
+    \lipsum[14-18]
+    
+    %------------------------------------------------------------------------------
+    % Referentielijst
+    %------------------------------------------------------------------------------
+    % TODO: (fase 4) de gerefereerde werken moeten in BibTeX-bestand
+    % bibliografie.bib voorkomen. Gebruik JabRef om je bibliografie bij te
+    % houden.
+    
+    \phantomsection
+    \printbibliography[heading=bibintoc]
+    
+\end{document}
