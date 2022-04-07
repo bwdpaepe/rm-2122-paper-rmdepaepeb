@@ -343,4 +343,57 @@
 
 @Book{Jain2021,
   author       = {Rishabh Jain},
-  date         = {20
+  date         = {2021-11},
+  title        = {Advanced Home Automation Using Raspberry Pi},
+  doi          = {10.1007/978-1-4842-7274-9},
+  editor       = {Subhas Chandra Mukhopadhyay},
+  isbn         = {1587144565},
+  number       = {10},
+  pages        = {1--22},
+  publisher    = {Apress},
+  url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
+  volume       = {2020},
+  booktitle    = {2019 {IEEE} International Conference on Internet of Things and Intelligence System ({IoTaIS})},
+  journaltitle = {Journal of Sensors},
+}
+
+@Book{AlWaeli2019,
+  author       = {Ali H. A. Al-Waeli and Hussein A. Kazem and Miqdam Tariq Chaichan and Kamaruzzaman Sopian},
+  date         = {2019-11},
+  title        = {Photovoltaic/Thermal ({PV}/T) Systems},
+  doi          = {10.1007/978-3-030-27824-3},
+  editor       = {Subhas Chandra Mukhopadhyay},
+  isbn         = {1587144565},
+  number       = {10},
+  pages        = {1--22},
+  publisher    = {Springer International Publishing},
+  url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
+  volume       = {2020},
+  booktitle    = {2019 {IEEE} International Conference on Internet of Things and Intelligence System ({IoTaIS})},
+  journaltitle = {Journal of Sensors},
+}
+
+@Article{Kouro2015,
+  author       = {Samir Kouro and Jose I. Leon and Dimitri Vinnikov and Leopoldo G. Franquelo},
+  date         = {2015-03},
+  journaltitle = {{IEEE} Industrial Electronics Magazine},
+  title        = {Grid-Connected Photovoltaic Systems: An Overview of Recent Research and Emerging {PV} Converter Technology},
+  doi          = {10.1109/mie.2014.2376976},
+  editor       = {Subhas Chandra Mukhopadhyay},
+  number       = {1},
+  pages        = {47--61},
+  url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
+  volume       = {9},
+  booktitle    = {2019 {IEEE} International Conference on Internet of Things and Intelligence System ({IoTaIS})},
+  isbn         = {1587144565},
+  publisher    = {Springer International Publishing},
+}
+
+@Article{Ashton_2009,
+  author       = {Ashton, Kevin},
+  date         = {2009-06-22},
+  journaltitle = {RFID journal},
+  title        = {That ‘internet of things’ thing},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
