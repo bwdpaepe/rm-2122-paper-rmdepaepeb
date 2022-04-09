@@ -88,27 +88,11 @@
     \section{Inleiding}
     
     % TODO: (fase 2) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
-    Vandaag beschikken meer en meer gezinnen over een zonnepaneleninstallatie op hun woning. Elke installatie bestaat onder andere uit een omvormer. Dit toestel zet de opgewekte gelijkstroom van de zonnepanelen om in wisselstroom voor gebruik op het elektrische net \autocite{Teodorescu_2011}. De omvormer beschikt ook over onderdelen die de hoeveelheid geproduceerde stroom meten. Typisch biedt de fabrikant van de omvormer een applicatie aan waarop de gebruiker de opbrengst van zijn installatie kan raadplegen. Wij maken de veronderstelling dat een groot aantal gebruikers deze gegevens maandelijks overneemt in een Excel bestand om op die manier de evolutie van de opbrengst bij te houden.\newline
-    Dit kan beter. Het doel van dit onderzoek is om een geautomatiseerd systeem te ontwikkelen zodat de gebruiker zelf dagelijks over de meest recente cijfers van zijn installatie beschikt. Dit op zich lijkt op het eerste zicht niet zo'n verbetering, want de gebruiker beschikt ook over die gegevens via de applicatie van de fabrikant. Maar het wordt wel interessant wanneer we deze gegevens zouden kunnen combineren met die van de digitale meter. Dan kunnen er waarden berekend worden zoals \begin{equation*}zelfconsumptie = totale opbrengst - geïnjecteerde opbrengst\end{equation*} en \begin{equation*}zelfvoorzienendheid = zelfconsumptie / (zelfconsumptie + verbruik)\end{equation*}.\newline
-    Voor dit onderzoek beperken we ons tot één specifieke omvormer: de Huawei omvormer SUN2000. Dit toestel wordt gebruikt om een Proof-of-Concept (POC) te ontwikkelen dat in staat moet zijn om de data van een Huawei omvormer SUN2000 lokaal uit te lezen, op te slaan en weer te geven.\newline
-    De omvormer is via WiFi (of via ethernet) verbonden met de router in het huis en kan zo communiceren met de server van de fabrikant waar de gegevens gemonitord en opgeslaan worden. Onze applicatie moet in staat zijn om lokaal met de omvormer te connecteren en de gegevens op te vragen. Vervolgens moeten de opgevraagde gegevens lokaal opgeslaan worden en op vraag van de gebruiker gevisualiseerd kunnen worden.\newline
-    Het onderzoeksvoorstel is dus zeer SPECIFIEK en toepasbaar. Het is ook MEETBAAR want de gegevens kunnen gecontroleerd worden met die van de fabrikant. Het is ook ACTUEEL aangezien meer en meer gezinnen beschikken over een installatie. Het is REALISTISCH want het plaatsen van de toestellen wordt de komende jaren meer en meer uitgerold. Tenslotte is het ook TIJDSGEBONDEN want de architectuur van de applicatie laat ons toe om een Minimal Viable Product (MVP) te definiëren bestaande uit:
-    \begin{itemize}
-        \item Connecteren met de omvormer over lokaal netwerk
-        \item Data uitlezen via API van de omvormer
-        \item Data opslaan
-        \item Data visualiseren
-    \end{itemize}
-    Verder is het onderwerp uitermate geschikt om de MVP uit te breiden met verbeteringen zoals usability en ondersteuning voor andere installaties. Daarnaast kunnen ook afgeleide toepassingen die verder bouwen op de POC ontwikkeld worden zoals combinatie met de waarden van de digitale meter, client-server architectuur enz.:
-    \begin{itemize}
-        \item Mobile App voor perfecte usability
-        \item Uitlezen data van de digitale meter
-        \item Berekenen van betekenisvolle afgeleide waarden zoal zelfconsumptie en zelfvoorzienendheid
-        \item Centrale opslag van de gegevens per gebruiker via een client-server architectuur
-        \item Machine learning aan de hand van de geregistreerde gegevens
-    \end{itemize}
-    De aangehaalde doelstellingen en mogelijke uitbreiding zijn zeer relevant voor de maatschappij in het algemeen. Niet alleen de gebruiker zelf heeft baat bij het begrijpen van zijn installatie, ook het beleid en de energiesector heeft meer en meer nood aan representatieve en actuele data van het energielandschap van vandaag.\newline
-    Het doel van dit onderzoek is om een werkend systeem te ontwikkelen dat een gebruiker toe laat om dagelijks de opbrengst van zijn Huawei omvormer SUN2000 tot op heden te raadplegen. 
+    Vandaag beschikken meer en meer gebouwen over een zonnepaneleninstallatie. Dergelijke installatie wekt stroom op die enerzijds zelf verbruikt kan worden en anderzijds op het stroomnet geïnjecteerd kan worden. Individueel bieden deze installaties reeds een grote waarde zowel aan een gebruiker als aan de maatschappij door het opwekken van groene stroom. Maar daar bovenop is het mogelijk om nog meer specifieke meerwaarde te genereren door deze installaties slim te maken en ze te verbinden met het Internet of Things (IoT).
+    De connectie van een fotovoltaïsche installatie met het IoT vormt het onderwerp van dit onderzoek. We bouwen zelf een geäutomatiseerd systeem dat de opbrengst van een installatie uitleest en opslaat. Een gebruiker moet deze gegevens kunnen bekijken a.d.h.v. een app op de smartphone. Voor deze opdracht beperken we ons tot een specifieke Proof-of-Concept (POC).
+    Het IoT is de volgende (of reeds de huidige) hype in onze digitale wereld. Na de golf van de sociale netwerken en het internet dat daarmee geïntroduceerd werd, is het nu tijd voor ubiquitous internet. Alle elektrische toestellen worden verbonden met het internet, interageren met elkaar, leren daaruit, en passen hun functionaliteit daar naar aan teneinde een optimale dienstverlening voor de eindgebruiker te bieden.
+    Onze energievoorziening is ongelofelijk actueel. We moeten af van de fossiele brandstoffen en omschakelen naar schone energie via de groene transitie. Deze ambitie tergelijk met een steeds toenemende vraag naar energie, zorgt ervoor dat deze opgave uitermate complex is. Eén van de puzzelstukken in het energievraagstuk is zonneënergie. Het verdient daarom zeker alle aandacht om het aandeel van stroom opgewekt door zonnepanelen zo efficiënt mogelijk te beheren.
+    Het doel van dit onderzoek is om een geautomatiseerd systeem te ontwikkelen dat de opbrengstgegevens van een fotovoltaïsche installatie uitleest en opslaat. Deze gegevens kunnen via een app op de smartphone bekeken worden. Voor de POC gebruiken we een Huawei omvormer SUN2000, Rasperry Pi microcontroller, en open-HAB beheersysteem.
     
     \section{Overzicht literatuur}
     
@@ -117,46 +101,47 @@
     % Refereren naar de literatuur kan met:
     % \autocite{BIBTEXKEY} -> (Auteur, jaartal)
     % \textcite{BIBTEXKEY} -> Auteur (jaartal)
-    Voorbeeld van een referentie waar de auteursnaam geen onderdeel van de zin is~\autocite{Moore2002}.
+    We halen 2 aspecten aan om de onderzoeksvraag te motiveren.
     
-    Het aandeel van energie uit fotovoltaïsche cellen groeit jaarlijks \autocite{Shurtleff_2018}. Zonneënergie vormt daarom een belangrijke bijdrage aan de energiemix. De dalende prijzen van de fotovoltaïsche installaties, de zoektocht naar groene energie, het maatschappelijk draagvlak en de overheidspremies zijn allemaal elementen die de overstap naar zonneënergie versnellen \autocite{Kouro_2016}. Fotovoltaïsche installaties bestaan onder andere uit een omvormer, een hoogtechnologisch toestel dat naast het omzetten van gelijkstroom naar wisselstroom ook data genereert over de opbrengst. Een omvormer kan ook communiceren over het netwerk om zo via het internet die data op te slaan op remote servers van de fabrikant \autocite{Huawei}. Op die manier maken omvormers per definitie dus deel uit van het Internet of Things (IoT), een IT fenomeen dat het laatste decennium enorm aan belangstelling wint. Eén van de voornaamste gevolgen van IoT is het automatisch aanmaken van ongeziene hoeveelheden data \autocite{Gubbi_2013} \autocite{Kassab_2020}. Efficiënte toegang tot deze gegevens via mobiele applicaties zorgt ervoor dat het gehele internet meer en meer verweven geraakt met IoT. Niet alleen de eindgebruiker, maar de gehele maatschappij is gebaat bij het meten en delen van massa's informatie. Het zal ons in staat stellen om de dienstverlening te verbeteren zoals bijvoorbeeld het optimaliseren van het energieverbruik via het introduceren van de slimme meter \autocite{Gubbi_2013}.
+    Ten eerste groeit het aandeel van energie uit fotovoltaïsche cellen jaarlijks \autocite{Shurtleff_2018}. Zonneënergie vormt daarom een belangrijke bijdrage aan de energiemix. De dalende prijzen van de fotovoltaïsche installaties, de zoektocht naar groene energie, het maatschappelijk draagvlak en de overheidspremies zijn allemaal elementen die de overstap naar zonneënergie versnellen \autocite{Kouro_2016}.
+    Ten tweede is er de behoefte om al die zonnepaneleninstallaties met elkaar te verbinden. Dit zal ons in staat stellen om de energiebehoefte beter in kaart te brengen met als doel het ontwikkelen van een smart grid. Het smart grid (Tamilmaran and Dwarkadas, 2011) is een eigen afdeling binnen het IoT met als doelstelling:
+    \begin{itemize}
+        \item een zelflerend systeem door en voor de gebruikers
+        \item een gepersonaliseerd stroomaanbod
+        \item een optimaal veilig en betrouwbaar stroomaanbod
+        \item een gestuurde spreiding van energievoorziening en energieconsumptie
+    \end{itemize}
+
+    We gaan dieper in op de energietransitie.
     
-    IoT wordt voor het eerst benoemd door \textcite{Ashton_2009}. IoT verwijst naar slimme objecten, toestellen en sensoren die uniek adresseerbaar zijn op basis van hun communicatieprotocollen. Ze zijn autonoom en aanpasbaar met voldoende ingebouwde veiligheid \autocite{Shafique_2020}. De impact die IoT technologie kan hebben, blijft echter niet beperkt tot de waarde van één enkel object. De functionaliteit van één product kan verder uitgebreid worden wanneer het gekoppeld wordt aan gerelateerde producten \autocite{Wortmann_2015}. Het ultieme doel van IoT technologie is om ons het leven aangenamer te maken, omgeven door slimme objecten die weten wat we nodig hebben \autocite{Kassab_2020}.
+    We gaan dieper in op het IoT.
     
-    Eén van de toepassingen van de IoT technologie is het smart grid. Het bestaat uit een elektrisch netwerk dat op een intelligente manier de activiteiten van vele gebruikers verbindt. Producenten en verbruikers die verbonden zijn via het smart grid zullen uiteindelijk zorgen voor een rendabele, duurzame en betrouwbare energiebron \autocite{Kassab_2020} .
+    IoT wordt voor het eerst benoemd door \textcite{Ashton_2009}. IoT verwijst naar slimme objecten, toestellen en sensoren die uniek adresseerbaar zijn op basis van hun communicatieprotocollen. Ze zijn autonoom en aanpasbaar met voldoende ingebouwde veiligheid \autocite{Shafique_2020}. De impact die IoT technologie kan hebben, blijft echter niet beperkt tot de waarde van één enkel object. De functionaliteit van één product kan verder uitgebreid worden wanneer het gekoppeld wordt aan gerelateerde producten \autocite{Wortmann_2015}. Het ultieme doel van IoT technologie is om ons het leven aangenamer te maken, omgeven door slimme objecten die weten wat we nodig hebben \autocite{Kassab_2020}. Eén van de voornaamste gevolgen van IoT is het automatisch aanmaken van ongeziene hoeveelheden data \autocite{Gubbi_2013} \autocite{Kassab_2020}. Algemene toegang tot deze gegevens, van alle objecten onderling verbonden via het internet ontplooit het IoT helemaal in de domeinen die diensten en producten leveren \autocite{Gubbi_2013}. \textcite{Kassab_2020} geeft een compleet overzicht van alle domeinen met recente IoT toepassingen. Tussen smart cities, medische toepassingen, en vele andere, selecteren wij smart grid en smart home als toepassingsgebieden voor ons onderzoek.
     
-    Een andere toepassing van de IoT technologie is het smart home. Het transformeert een woning in een geäutomatiseerd gebouw vol met geïnstalleerde en gecontroleerde slimme objecten. De algemene architectuur van een smart home laat die objecten communiceren met een centraal beheersysteem dat kan bediend worden via een app op de smartphone \autocite{Kassab_2020}. Een smart home biedt functies voor het welzijn, de veiligheid, het vermaak en het comfort van de bewoners \autocite{Choi_2021}.
+    Het smart grid bestaat uit een elektrisch netwerk dat op een intelligente manier de activiteiten van vele gebruikers verbindt. Producenten en verbruikers die verbonden zijn via het smart grid zullen uiteindelijk zorgen voor een rendabele, duurzame en betrouwbare energiebron \autocite{Kassab_2020} .
     
-    Het centrale beheersysteem draait software die moet toelaten om heel uiteenlopende slimme objecten te verbinden en weer te geven op de smartphone \autocite{Setz_2021}. Er bestaan zowel commerciële als open-source oplossingen. Vandaag zien we meer en meer dat de smart home componenten gebruik maken van het internet voor hun communicatie en van standaarden voor een betere interoperabiliteit. Een goed systeem steunt op volgende principes: \begin{itemize}
+    Het smart home transformeert een woning in een geäutomatiseerd gebouw vol met geïnstalleerde en gecontroleerde slimme objecten. De algemene architectuur van een smart home laat die objecten communiceren met een centraal beheersysteem dat kan bediend worden via een app op de smartphone \autocite{Kassab_2020}. Een smart home biedt functies voor het welzijn, de veiligheid, het vermaak en het comfort van de bewoners \autocite{Choi_2021}.
+
+    We zoeken de verschillende componenten op die deel zullen uitmaken van ons te bouwen systeem en onderzoeken de eigenschappen en concepten om ze in de praktijk te gebruiken.
+    
+    Fotovoltaïsche installaties bestaan onder andere uit een omvormer, een hoogtechnologisch toestel dat gelijkstroom (afkomstig van de zonnepanelen) omzet naar wisselstroom (dat gebruikt wordt op het stroomnet) \autocite{Teodorescu_2011}. Een omvormer genereert ook data over de opbrengst en communiceert die over het internet naar remote servers van de fabrikant \autocite{Huawei Fusion Solar}. De omvormer is dus ons object, ons toestel dat verbonden is met het IoT.
+    
+    Om die verbinding tot stand te brengen is er een centraal systeem nodig. Het centrale beheersysteem draait software die moet toelaten om heel uiteenlopende slimme objecten te verbinden en weer te geven op de smartphone \autocite{Setz_2021}. Er bestaan zowel commerciële als open-source oplossingen. Vandaag zien we meer en meer dat de smart home componenten gebruik maken van het internet voor hun communicatie en van standaarden voor een betere interoperabiliteit. Een goed systeem steunt op volgende principes: \begin{itemize}
         \item open API's
         \item interoperabele protocollen
         \item integreer ook de meest eenvoudige toestellen
         \item beheer heterogene systemen centraal
     \end{itemize}
 
-    Open Home Automation Bus (open-HAB) is één van de open-source beheersystemen. Het is fabrikant onafhankelijk en werkt met vele protocollen en toestellen waardoor het een centrale plaats inneemt in de smart home \autocite{Domb_2019}. Door deze flexibiliteit tezamen met een goed uitgebouwde community achter het systeem, werken wij verder met open-HAB. \textcite{Sowah_2020} bouwt een hele architectuur met centraal open-HAB voor de smart home. We zien dat open-HAB op een Raspberry Pi microcontroller geïnstalleerd wordt en fungeert als centrale server voor het systeem.
+    Open Home Automation Bus (open-HAB) is één van de open-source beheersystemen. Het is fabrikant onafhankelijk en werkt met vele protocollen en toestellen waardoor het een centrale plaats inneemt in de smart home \autocite{Domb_2019}. \textcite{Sowah_2020} bouwt een hele architectuur met centraal open-HAB voor de smart home. We zien dat open-HAB op een Raspberry Pi microcontroller geïnstalleerd wordt en fungeert als centrale server voor het systeem.
     
-    Met de opkomst van het IoT is er nood aan goedkope en flexibele hardware. Raspberry Pi vervult deze eisen doordat het uitbreidbaar is en telkens weer kan omgebouwd worden tot een andere component die enkele specifieke taken vervult \autocite{Maksimovic_2015}.
+    Met de opkomst van het IoT is er nood aan goedkope en flexibele hardware. Raspberry Pi vervult deze eisen doordat het uitbreidbaar is en telkens weer kan omgebouwd worden tot een andere component die enkele specifieke taken vervult \autocite{Maksimovic_2015}. \textcite{Jain_2021} ontleedt de Raspberry Pi volledig alvorens hem uit te breiden met diverse componenten om er een volwaardig en goedkoop home automation systeem van te maken.
     
+    Tot hier toe hebben we de relevantie van het automatiseren en integreren van de data afkomstig van fotovoltaïsche installaties voor het smart grid en het smart home besproken. De verschillende onderdelen van een intelligent systeem zoals een beheersysteem en een microcontroller werden opgezocht. In wat volgt kiezen we enkele specifieke onderdelen om een POC te definiëren.
     
+    Er bestaan veel omvormers van verschillende fabrikanten op de markt. Voor de POC selecteren we de Huawei omvormer SUN2000 \autocite{huawei handleiding}. We zijn gebaat met een flexibel beheersysteem dat steunt op een goed uitgebouwde community. Op basis van die criteria selecteren wij open-HAB. Tenslotte valt de keuze voor een microcontroller op de Raspberry Pi. Dit wordt gemotiveerd door de hoge populariteit van dit toestel en het grote aanbod op de markt.
     
-    
-    
-    
-    Wat is IoT
-    
-    Smart grid
-    
-    Smart home
-    
-    Home automation
-    
-    Raspberry Pi
-    
-    OpenHAB
-    
-    POC Huawei SUN2000
-    
+    Het doel van dit onderzoek is om een geautomatiseerd systeem te ontwikkelen dat de opbrengstgegevens van een fotovoltaïsche installatie uitleest en opslaat. Deze gegevens kunnen op elk moment via een app op de smartphone bekeken worden. Voor de POC gebruiken we een Huawei omvormer SUN2000, Rasperry Pi microcontroller, en open-HAB beheersysteem.
     
     \section{Methodologie}
     
