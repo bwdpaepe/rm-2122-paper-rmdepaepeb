@@ -151,7 +151,25 @@
     
     % TODO: (fase 5) beschrijf in detail in welke fasen je onderzoek uiteenvalt, hoe lang elke fase duurt en wat het concrete resultaat van elke fase is. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
     
-    \lipsum[10-12]
+    Ons onderzoek wordt opgesplitst in 5 afzonderlijke fases:
+    \begin{itemize}
+        \item Verbinding maken met de omvormer over het lokaal netwerk.
+        \item Opzetten van een centraal beheersysteem.
+        \item De omvormer aanspreken via het centraal beheersysteem.
+        \item Ontwikkelen van een mobiele applicatie die communiceert met het centraal beheersysteem.
+        \item Opvragen van de gegevens van de omvormer aan het centraal beheersysteem via de mobiele applicatie.
+    \end{itemize}
+    Deze verschillende fases moeten achtereenvolgend, sequentieel doorlopen worden, aangezien ze voortbouwen op het resultaat van de voorgaande fase. De complexiteit van het werk neemt toe bij elke fase, met als eindresultaat bij de laatste fase een geïntegreerd werkend systeem dat aantoont dat de onderzoeksvraag opgelost kan worden.
+    
+    De eerste fase legt zich toe op het maken van een verbinding met de omvormer over het lokaal netwerk. We gebruiken een Huawei SUN2000 uitgebreid met een Smart Dongle voor wireless of fixed communicatie tussen de omvormer en het beheersysteem. De communicatie gebeurt adhv. het Modbus TCP protocol. Het doel van deze fase is om op vraag van de gebruiker een connectie te maken met de omvormer en gegevens op te vragen. Als eindresultaat van deze fase verwachten we een script dat connecteert met de omvormer adhv. Modbus TCP en de energiegevens van de omvormer uitprint.
+    
+    De tweede fase bestaat uit het installeren en configuren van een centraal beheersysteem op een microcontroller. Het doel van deze fase is om te beschikken over een Raspberry Pi met daarop geïnstalleerd het openHABian besturingssysteem, een volledig geconfigureerd Linux besturingssysteem met het openHAB beheersysteem. Na afloop van deze fase moeten we in staat zijn om een verbinding te maken met de microcrontroller en over alle functionaliteit van openHAB te beschikken.
+    
+    In de derde fase gebruiken we het centraal beheersysteem uit fase 2 om te connecteren met de omvormer. OpenHAB beschikt over de MQTT server waarop we de omvormer registreren. De verbinding met de omvormer over Modbus TCP moet volledig geconfigureerd worden in openHAB. Eens de verbinding tot stand is gekomen, kunnen we alle gegevens en historieken bekijken van het HABPanel. Het doel van deze fase is om te verbinden met de omvormer via het centraal beheersystemen en de energiegegevens van de omvormer te raadplegen adhv. het HABPanel.
+    
+    De vierde fase focust zich op het ontwikkelen van een mobiele applicatie die resources van het openHAB beheersysteem opvraagt en weergeeft. We ontwikkelen een progressive web app aan de hand van React die goed presteert op verschillende devices zoals laptop, tablet en smartphone. De gegevens waarmee gewerkt wordt, blijven beperkt tot de opgewekte stroom, die als resource beschikbaar gemaakt wordt via de openHAB REST API. Het doel van deze fase is een mobiele applicatie die resources opvraagt via de openHAB REST API. De gevraagde gegevens worden op een gebruiksvriendelijke manier aan de gebruiker getoond.
+    
+    De vijfde en laatste fase tenslotte integreert alle voorgaande fases tot één werkend systeem. Het systeem betaat uit een mobiele applicatie, een microcontroller met openHAB, en een Huawei SUN2000 met Smart Dongle. Het doel is om adhv. een mobiele applicatie te verbinden met openHAB om de meeste recente data van de geregistreerde Huawei SUN2000 weer te geven.
     
     \section{Verwachte conclusies}
     
