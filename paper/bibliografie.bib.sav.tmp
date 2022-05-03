@@ -8,6 +8,7 @@
   publisher    = {John Wiley & Sons},
   url          = {https://www.ebook.de/de/product/6597146/remus_teodorescu_marco_liserre_pedro_rodriguez_grid_converters_for_photovoltaic_and_wind_power_systems.html},
   volume       = {82},
+  file         = {:Teodorescu2011.pdf:PDF},
   journaltitle = {Renewable and Sustainable Energy Reviews},
 }
 
@@ -18,11 +19,13 @@
   title        = {A{\textendash}Z survey of Internet of Things: Architectures, protocols, applications, recent advances, future directions and recommendations},
   doi          = {10.1016/j.jnca.2020.102663},
   editor       = {Subhas Chandra Mukhopadhyay},
+  issn         = {1084-8045},
   pages        = {102663},
   url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
   volume       = {163},
+  file         = {:Kassab2020.pdf:PDF},
   isbn         = {1587144565},
-  publisher    = {CISCO},
+  publisher    = {Elsevier {BV}},
 }
 
 @Article{Gubbi2013,
@@ -36,8 +39,9 @@
   pages        = {1645--1660},
   url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
   volume       = {29},
+  file         = {:Gubbi2013.pdf:PDF},
   isbn         = {1587144565},
-  publisher    = {CISCO},
+  publisher    = {Elsevier {BV}},
 }
 
 @Article{Shafique2020,
@@ -51,8 +55,9 @@
   pages        = {23022--23040},
   url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
   volume       = {8},
+  file         = {:Shafique2020.pdf:PDF},
   isbn         = {1587144565},
-  publisher    = {CISCO},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
 @Article{Wortmann2015,
@@ -66,8 +71,9 @@
   pages        = {221--224},
   url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
   volume       = {57},
+  file         = {:Wortmann2015.pdf:PDF},
   isbn         = {1587144565},
-  publisher    = {CISCO},
+  publisher    = {Springer Science and Business Media {LLC}},
 }
 
 @Article{Choi2021,
@@ -81,8 +87,9 @@
   pages        = {126908},
   url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
   volume       = {301},
+  file         = {:Choi2021.pdf:PDF},
   isbn         = {1587144565},
-  publisher    = {CISCO},
+  publisher    = {Elsevier {BV}},
 }
 
 @InCollection{Kramp2013,
@@ -98,6 +105,7 @@
   publisher    = {Springer Berlin Heidelberg},
   url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
   volume       = {301},
+  file         = {:Kramp2013.pdf:PDF},
   journaltitle = {Journal of Cleaner Production},
 }
 
@@ -113,8 +121,9 @@
   url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
   volume       = {9},
   booktitle    = {Enabling Things to Talk},
+  file         = {:Setz2021.pdf:PDF},
   isbn         = {1587144565},
-  publisher    = {Apress},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
 @Article{Sowah2020,
@@ -123,14 +132,15 @@
   journaltitle = {Journal of Sensors},
   title        = {Design of a Secure Wireless Home Automation System with an Open Home Automation Bus ({OpenHAB} 2) Framework},
   doi          = {10.1155/2020/8868602},
-  editor       = {Subhas Chandra Mukhopadhyay},
+  editor       = {Rafael Morales},
   number       = {10},
   pages        = {1--22},
   url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
   volume       = {2020},
   booktitle    = {Enabling Things to Talk},
+  file         = {:Sowah2020.pdf:PDF},
   isbn         = {1587144565},
-  publisher    = {Apress},
+  publisher    = {Hindawi Limited},
 }
 
 @Book{Jain2021,
@@ -146,16 +156,9 @@
   url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.html},
   volume       = {2020},
   booktitle    = {2019 {IEEE} International Conference on Internet of Things and Intelligence System ({IoTaIS})},
+  file         = {:Jain2021.pdf:PDF},
   journaltitle = {Journal of Sensors},
 }
 
 @Article{Kouro2015,
-  author       = {Samir Kouro and Jose I. Leon and Dimitri Vinnikov and Leopoldo G. Franquelo},
-  date         = {2015-03},
-  journaltitle = {{IEEE} Industrial Electronics Magazine},
-  title        = {Grid-Connected Photovoltaic Systems: An Overview of Recent Research and Emerging {PV} Converter Technology},
-  doi          = {10.1109/mie.2014.2376976},
-  editor       = {Subhas Chandra Mukhopadhyay},
-  number       = {1},
-  pages        = {47--61},
-  url          = {https://www.ebook.de/de/product/25454711/david_hanes_gonzalo_salgueiro_patrick_grossetete_iot_fundamentals_networking_technologies_protocols_and_use_cases_for_the_internet_of_things.
+  author       = {Samir Kouro and Jose I. Leon and Dimitri 
