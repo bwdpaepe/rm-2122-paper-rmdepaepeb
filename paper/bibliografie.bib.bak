@@ -206,14 +206,16 @@
   number       = {04},
   pages        = {305--311},
   volume       = {02},
+  file         = {:Vijayapriya2011.pdf:PDF},
   publisher    = {Scientific Research Publishing, Inc.},
 }
 
 @Report{IPCC2022,
-  author      = {P.R. Shukla and J. Skea and R. Slade and A. Al Khourdajie and R. van Diemen and D. McCollum and M. Pathak and S. Some and P. Vyas and R. Fradera and M. Belkacemi and A. Hasija and G. Lisboa and S. Luz and J. Malley, (eds.)},
   institution = {Cambridge University Press, Cambridge, UK and New York, NY, USA.},
   title       = {IPCC, 2022: Climate Change 2022: Mitigation of Climate Change. Contribution of Working Group III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change},
   doi         = {10.1017/9781009157926},
+  editor      = {P.R. Shukla and J. Skea and R. Slade and A. Al Khourdajie and R. van Diemen and D. McCollum and M. Pathak and S. Some and P. Vyas and R. Fradera and M. Belkacemi and A. Hasija and G. Lisboa and S. Luz and J. Malley},
+  file        = {:IPCC2022.pdf:PDF},
 }
 
 @Article{KouveliotisLysikatos2022,
@@ -225,6 +227,7 @@
   number       = {1},
   pages        = {1--11},
   volume       = {10},
+  file         = {:KouveliotisLysikatos2022.pdf:PDF},
   publisher    = {Journal of Modern Power Systems and Clean Energy},
 }
 
@@ -236,23 +239,29 @@
   doi          = {10.1109/access.2022.3152528},
   pages        = {24316--24326},
   volume       = {10},
+  file         = {:Patel2022.pdf:PDF},
   publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
-@WWW{Fusionsolar2021,
-  author = {Huawei},
-  date   = {2021-12-23},
-  title  = {FusionSolar Smart PV Management System Connection User Manual (Inverters + SDongleA)},
-  url    = {https://support.huawei.com/enterprise/en/doc/EDOC1100173984?idPath=9452479|21439560|7921563|21102414|21571652},
+@Manual{Fusionsolar2021,
+  author      = {Huawei},
+  date        = {2021-12-23},
+  title       = {FusionSolar Smart PV Management System Connection User Manual (Inverters + SDongleA)},
+  url         = {https://support.huawei.com/enterprise/en/doc/EDOC1100173984},
+  file        = {:Fusionsolar2021.pdf:PDF},
+  institution = {Huawei},
 }
 
-@InBook{Domb2019,
+@InCollection{Domb2019,
   author    = {Domb, Menachem},
-  booktitle = {IoT and Smart Home Automation},
+  booktitle = {{IoT} and Smart Home Automation [Working Title]},
   date      = {2019-11-27},
-  title     = {Smart home systems based on Internet ofThings},
+  title     = {Smart Home Systems Based on Internet of Things},
+  doi       = {10.5772/intechopen.84894},
   editor    = {Yasser Ismail},
   isbn      = {978-1-78984-096-4},
+  publisher = {{IntechOpen}},
+  file      = {:Domb2019.pdf:PDF},
 }
 
 @InProceedings{Maksimovic2014,
@@ -260,13 +269,15 @@
   booktitle = {Proceedings of 1st International Conference on Electrical, Electronic and Computing EngineeringIcETRAN 2014},
   date      = {2014-06-02},
   title     = {Raspberry Pi as Internet of Things hardware:Performances and Constraints},
+  file      = {:Maksimovic2014.pdf:PDF},
 }
 
-@WWW{SUN2000L2022,
+@Manual{SUN2000L2022,
   author = {Huawei},
   date   = {2022-03-09},
   title  = {SUN2000-(2KTL-6KTL)-L1 Gebruikershandleiding},
   url    = {https://support.huawei.com/enterprise/en/doc/EDOC1100149276?idPath=9452479|21439560|7921563|21102413|22027611},
+  file   = {:SUN2000L2022.pdf:PDF},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

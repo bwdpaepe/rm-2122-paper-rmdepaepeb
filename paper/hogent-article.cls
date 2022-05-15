@@ -52,6 +52,7 @@ headheight=12pt
 
 \usepackage{hyperref}
 \hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=black,citecolor=color2,linkcolor=color2,bookmarksopen=false}
+\usepackage[hyphens]{url}
 
 %----------------------------------------------------------------------
 % Lettertypes en kleuren
